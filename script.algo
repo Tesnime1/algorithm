@@ -1,0 +1,32 @@
+ALGORITHM sentense
+VAR
+  count, word, : INTEGER;
+  sentence,array :STRING;
+BEGIN
+ 
+sentence='.';
+read(sentence);
+ lengthSentence= LENGTH(sentence);
+
+ word=0;
+ FOR i FROM 0 TO lengthSentence STEP step  DO
+ IF (sentence[i]=="") THEN
+word++
+ END_IF
+ END_FOR
+
+count=0;
+ Array = array ["e","a","i","u","o"] of STRING;
+FOR i FROM 0 TO lengthSentence STEP step  DO
+ FOR j FROM 0 TO LENGTH(Array) STEP step  DO
+  IF (Array[j]==sentence[j]) THEN
+   count ++
+  END_IF
+ END_FOR
+END_FOR
+write("the length of the sentence is" lengthSentence);
+write("the number of words in the sentence is" word);
+write("the number of vowels is"count);
+END ALGORITHM
+
+END
